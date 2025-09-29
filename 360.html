@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sikkim 360 View Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Explore Sikkim in 360°</h1>
+    <p>
+      Sikkim, nestled in the eastern Himalayas, is one of India's most scenic and peaceful states.
+      Known for its vibrant monasteries, breathtaking mountains, and diverse culture, it offers a unique
+      blend of natural beauty and spiritual richness. Explore Sikkim's famous locations below in immersive 360° view.
+    </p>
+
+    <div class="buttons">
+      <!-- Using famous locations that we know have street view -->
+      <button onclick="setStreetView(48.8584, 2.2945)">Eiffel Tower</button>
+      <button onclick="setStreetView(27.1751, 78.0421)">Taj Mahal</button>
+      <button onclick="setStreetView(40.6892, -74.0445)">Statue of Liberty</button>
+      <button onclick="setStreetView(41.8902, 12.4922)">Colosseum</button>
+    </div>
+
+    <!-- 360 View Container -->
+    <div id="street-view"></div>
+  </div>
+
+  <!-- Google Maps JS API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4VH57o4K1aIVl_6glJE8f3nFaL9PoLsQ&callback=initStreetView"
+    async defer>
+  </script>
+
+  <!-- Your JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
